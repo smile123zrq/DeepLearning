@@ -10,12 +10,12 @@ sys.path.append(os.pardir)
 # 读入数据
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
-network = FiveLayerNet(input_size=784, hidden1_size=50, hidden2_size=50, hidden3_size=50, hidden4_size=50, output_size=10)
+network = FiveLayerNet(input_size=784, hidden1_size=100, hidden2_size=100, hidden3_size=100, hidden4_size=100, output_size=10)
 
 iters_num = 20000   # 计算梯度，更新参数次数
 train_size = x_train.shape[0]   # 训练数据数量
 batch_size = 100    # mini_batch大小
-learning_rate = 0.1  # 学习率
+learning_rate = 0.001  # 学习率
 
 train_loss_list = []    # 损失函数值
 train_acc_list = []     # 训练数据识别精度
